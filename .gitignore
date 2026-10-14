@@ -1,0 +1,22 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+/data/
+.env.local
+
+# Local test output, databases and tooling state
+/output/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+.*/
+!.github/
+*.pem
+*.key

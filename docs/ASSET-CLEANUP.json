@@ -1,0 +1,346 @@
+{
+  "date": "2026-10-14",
+  "checked": [
+    "Active frontend imports including lazy admin",
+    "Server seed",
+    "Current database documents, orders and engagement"
+  ],
+  "retained": [
+    "All 11 active Vassel WebP images",
+    "Original supplied PNG logo and runtime WebP",
+    "User database and uploads"
+  ],
+  "bytesRemoved": 26674130,
+  "files": [
+    {
+      "file": "public/images/catalog/010002ca559c.jpg",
+      "bytes": 58378,
+      "sha256": "f05978b2b7bdae81f53bdbaf4a7fa759fdecaa7afb698ad80c7024b3b492e2fd",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/019fe0e8bdf1.jpg",
+      "bytes": 65883,
+      "sha256": "e78af0aed9796d47326eca6a75dbafab8c60f507c85fd35e7f9624e1e25a4898",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/0256cc194e21.jpg",
+      "bytes": 79527,
+      "sha256": "1c01e10270abd6516092903be46227523351f16f3038b9199557a404edf8e185",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/02a27eb72e60.jpg",
+      "bytes": 175936,
+      "sha256": "c0412f26cd35dd2eed606997d65e09701b4aab9774900f3eababe22addc56daa",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/073029a68cd8.jpg",
+      "bytes": 94023,
+      "sha256": "d550767a782b5ee6f3ddd06f0592074ad801c68fb7dc1ba951eae145cab569a6",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/0d5606d49a97.jpg",
+      "bytes": 103480,
+      "sha256": "667551ffe0a5a00625560cf2c125d10afeb1e9d694790adbe376d8f7735611e6",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/0f4d437899e8.jpg",
+      "bytes": 270891,
+      "sha256": "b02a7e470c1bd1375adbf60fa18d05833d15d4a6ca0a6efe780f49428974c2a3",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/14841d59b38e.jpg",
+      "bytes": 208450,
+      "sha256": "4476af92ebb08e1dd154e98161d07d280ed90d218fe1a846604f2589f8c2d5cc",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/1ba63c078cfc.jpg",
+      "bytes": 66933,
+      "sha256": "92253049920cfd8a3019f82ec663e3731a7053d7b5be6b5eb4f700521a401c37",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/1e064fdcd0e5.jpg",
+      "bytes": 193684,
+      "sha256": "7c938d45e4ca700127c2cb2c45a822bb6ef1b0b1aaed0cf864663740dfc5bd89",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/22e17ebaaceb.jpg",
+      "bytes": 127655,
+      "sha256": "98435101c46a365383169473b5b7f22fadc43458637586d382b150ef3bffcc87",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/347c30c66195.jpg",
+      "bytes": 106020,
+      "sha256": "e34f9dc49c7e5d03a57e7722b5e521d4c80c266ddd57b2e15ca54e694a725076",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/37a5b46df66b.jpg",
+      "bytes": 101874,
+      "sha256": "efed363653bfab1089f3de0da04f663532a283f890bf6090adbaa6234150d50c",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/4070793cc367.jpg",
+      "bytes": 88777,
+      "sha256": "42d14e0c648abcbc8faf2e699569b380dc8b070ecc38fab8b4417a5acd7be098",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/4899330efe36.jpg",
+      "bytes": 150626,
+      "sha256": "d814921639079ca8c33e68f8b803d4e3bd191783538f3c3ee076d7eba339cbc8",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/5302f5403253.jpg",
+      "bytes": 221324,
+      "sha256": "f5b3080dfc597526171707926a66d9d9080b9c37739b24420e625fb15e032569",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/585391cd2b73.jpg",
+      "bytes": 368877,
+      "sha256": "77cb76067c91d5631a522da79db18840ca8da6c3a944c11f544453703582f214",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/615e86524ac7.jpg",
+      "bytes": 138142,
+      "sha256": "768f595ef9b417fbf000ffeed240350f7b4cb11aa7fe1cab644afabaf249eac9",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/64c1acd4acbf.jpg",
+      "bytes": 140964,
+      "sha256": "bfab3b59df9108af5789ce4add782f9e0a28f3af051ce2597cd2b115f4385ec4",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/6da8cad54df1.jpg",
+      "bytes": 162168,
+      "sha256": "0fd76c8520a04538df6cfc4e31e185847245b0cda9b019a6e56b255bc93c37a5",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/7486dbcaeb2d.jpg",
+      "bytes": 114329,
+      "sha256": "1105b9845e43b5930985f58a25e14b0e20bb04f651bd04ef545ac6efd7e50b8d",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/7bc8d620a158.jpg",
+      "bytes": 185198,
+      "sha256": "1f395a9c499637205f585e2cfe8c60788247cf0ff3306a05833eb995f8320935",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/81f6c4308eb7.jpg",
+      "bytes": 204770,
+      "sha256": "bdeb1fcfead1528ce7c9364c75cce15f1d870e4edc0565328d19334f3b97603b",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/85748cf86e0f.jpg",
+      "bytes": 43224,
+      "sha256": "93041d244fa3885cd0c2f322821d964f5348249969fd0c41c847f16dc1472da4",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/861fcbcfafdf.jpg",
+      "bytes": 152016,
+      "sha256": "d275bd3c14492f4f8d8ff5cd65e9af0330ccc757c61e56654693d02e9be33d97",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/9015d68420f3.jpg",
+      "bytes": 244706,
+      "sha256": "10bf30c91923333c9e10cf948acb95da0e2bc40f29a6d814a78235b6a332d58f",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/92f369e5c504.jpg",
+      "bytes": 157474,
+      "sha256": "3887f61b617e09ad7e520a0902c04dc7b2fc1363718083eb0cfc95ecb160999c",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/97452ec77d8b.jpg",
+      "bytes": 69213,
+      "sha256": "89256372b883bf3a495b14a967b467a184532c3042e43627a6ee155d87a9d252",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/a55639f92e95.jpg",
+      "bytes": 318543,
+      "sha256": "4945ca8a64b156295cd92b9f7b49e487f0ca792f55320f8fc0d81703c222cdc1",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/be9d8164a356.jpg",
+      "bytes": 364922,
+      "sha256": "286529c8e70aa9915b6e99a7684c4ad42be54beb615426a29135658209f1189f",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/c24f13f7e13c.jpg",
+      "bytes": 173049,
+      "sha256": "179b27ccbe26efa6c13c0927e275421f2e6cf270ef84f7b6cfda9e01a32987f7",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/c5318f9e8f3d.jpg",
+      "bytes": 150850,
+      "sha256": "6c3839e87a1f90d36cf4d9b643fec3036ff54b3a8b68c20b2b0ef35eb3b41154",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/d137d70b3963.jpg",
+      "bytes": 226872,
+      "sha256": "f8da2c19d554e13da9e44fa57eb4cf2a4851a95739ee9550e91762dbcbe2ef04",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/d82618ffd9d9.jpg",
+      "bytes": 377084,
+      "sha256": "0eb0ad071b6672102fe2d2089f2f247688238b9c7338765f2606d57686bf6739",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "public/images/catalog/dec3c993d63e.jpg",
+      "bytes": 218895,
+      "sha256": "6eea7f424c10cce60607f00bda05a8208fb79463fa979746aa6afe411cd78765",
+      "reason": "Unused legacy stock cache"
+    },
+    {
+      "file": "vassel-arche.jpg",
+      "bytes": 428910,
+      "sha256": "fe720454de7bdbb2cf55300987891bf7350df9c83554bf82eddd3428e06ae74d",
+      "reason": "Duplicate campaign source; optimized WebP retained"
+    },
+    {
+      "file": "vassel-atelier.jpg",
+      "bytes": 365308,
+      "sha256": "a5d0ad2c0f4f49a66b916400f3bb08af12f7d79c9dd3c98fa8949f04fd84f5a3",
+      "reason": "Duplicate campaign source; optimized WebP retained"
+    },
+    {
+      "file": "vassel-campaign.jpg",
+      "bytes": 399679,
+      "sha256": "db0fae3bafb6d2a125aa2596fecb375abae97060d76c0ec1be355c833482c268",
+      "reason": "Duplicate campaign source; optimized WebP retained"
+    },
+    {
+      "file": "vassel-cuff.jpg",
+      "bytes": 401142,
+      "sha256": "a7858e9e775adb644c8ae93199a1285a65736773d25175aed956d3fee2263220",
+      "reason": "Duplicate campaign source; optimized WebP retained"
+    },
+    {
+      "file": "vassel-jacket.png",
+      "bytes": 2944044,
+      "sha256": "62cc4ed78e769bf9cc015a6fc30328db8de4af110a6022ea2b178b027f2a3d61",
+      "reason": "Duplicate campaign source; optimized WebP retained"
+    },
+    {
+      "file": "vassel-lookbook.jpg",
+      "bytes": 402937,
+      "sha256": "d81eab5466c96bfe02fac922d088b92a3a021fdeddec5a3b6776efc6858ed5bf",
+      "reason": "Duplicate campaign source; optimized WebP retained"
+    },
+    {
+      "file": "vassel-raffia.jpg",
+      "bytes": 592775,
+      "sha256": "48dc19e57bbead98db56e0dc7904c50b2f3148cd47912ca719005f0e6cfee64f",
+      "reason": "Duplicate campaign source; optimized WebP retained"
+    },
+    {
+      "file": "vassel-sella.jpg",
+      "bytes": 505377,
+      "sha256": "2414a006dabc7e89499a9845a3f427dd0e6843102c18cfa840c68c7606716668",
+      "reason": "Duplicate campaign source; optimized WebP retained"
+    },
+    {
+      "file": "vassel-shirt.png",
+      "bytes": 2083765,
+      "sha256": "466ddd7db63f8b82423c17075f56b8e59315ab501c38991fe5c1af3017e8de02",
+      "reason": "Duplicate campaign source; optimized WebP retained"
+    },
+    {
+      "file": "vassel-signature.jpg",
+      "bytes": 430421,
+      "sha256": "35092ab142a63d4402b783e7901126c04d27597b4742d2ff461febe116f51ada",
+      "reason": "Duplicate campaign source; optimized WebP retained"
+    },
+    {
+      "file": "vassel-trousers.png",
+      "bytes": 2481553,
+      "sha256": "3174309ba8f61f9721a07c89f4014feb970f04a60d557e9eca2b77100df0d39a",
+      "reason": "Duplicate campaign source; optimized WebP retained"
+    },
+    {
+      "file": "public/video/vassel-campaign.mp4",
+      "bytes": 1203978,
+      "sha256": "fc0c6edec235e8f61b110d38983653ae0e280cdeaf74bee2dae8561537149c3c",
+      "reason": "Homepage video removed at user request"
+    },
+    {
+      "file": "output/qa/home-desktop.png",
+      "bytes": 3699196,
+      "sha256": "ff8e3a048ee125f5fc9dd3e194491925d731b25f5ee8e9bf20463647ec465a80",
+      "reason": "Superseded QA screenshot or unreferenced test upload"
+    },
+    {
+      "file": "output/qa/hero-desktop.png",
+      "bytes": 1289115,
+      "sha256": "c4b3cdeb9fb810d617cc645007a0cb7b8541ad8b7c1db7d26272c89b6448715e",
+      "reason": "Superseded QA screenshot or unreferenced test upload"
+    },
+    {
+      "file": "output/qa/home-mobile.png",
+      "bytes": 1393010,
+      "sha256": "713f427c683a1e15f5491ea9fc00b42ad9db4300c3d6856782de6c1ced1d86fb",
+      "reason": "Superseded QA screenshot or unreferenced test upload"
+    },
+    {
+      "file": "output/qa/current-mobile.png",
+      "bytes": 348170,
+      "sha256": "469638f2d4afea2247a31ff3f4f80407b8b56afb20e1ebfcf1457130aebd5461",
+      "reason": "Superseded QA screenshot or unreferenced test upload"
+    },
+    {
+      "file": "output/qa/hero-mobile.png",
+      "bytes": 378191,
+      "sha256": "7690ca896707d2d520fc220ccb8c4c36c799a9ef8b3de3db53413a2afae18fbe",
+      "reason": "Superseded QA screenshot or unreferenced test upload"
+    },
+    {
+      "file": "output/qa/inspect-account.png",
+      "bytes": 61885,
+      "sha256": "72c0a2e5471683f43b9007ac471bae4fd24d20ffb5dad00eac355924611f5c33",
+      "reason": "Superseded QA screenshot or unreferenced test upload"
+    },
+    {
+      "file": "output/qa/inspect-home-fr.png",
+      "bytes": 1206809,
+      "sha256": "949d375099bc9a50cfe6b93f91e17bb0c489645e58c343816c9308adae9b0e85",
+      "reason": "Superseded QA screenshot or unreferenced test upload"
+    },
+    {
+      "file": "output/qa/development-db-20261014/uploads/3caef403-3fff-4b64-a4a1-babf1d3cc0bb.webp",
+      "bytes": 133108,
+      "sha256": "c2e97c80c11d9ceea0de89a39be763d526f07bdb648ee356532de1bab4af21b7",
+      "reason": "Superseded QA screenshot or unreferenced test upload"
+    }
+  ]
+}

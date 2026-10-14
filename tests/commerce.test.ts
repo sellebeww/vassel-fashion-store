@@ -1,0 +1,14 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { addCartItem, updateCartQuantity, reconcileCart, promotionError, discountFor } from '../src/lib/commerce';
+import { INITIAL_PRODUCTS, INITIAL_PROMOTIONS } from '../src/data/initialData';
+import type { CartItem } from '../src/types';
+const product=INITIAL_PRODUCTS[0];
+const item:CartItem={id:'a',product,variant:product.variants[0],quantity:1};
+test('adding twice is immutable and increments once',()=>{const first=addCartItem([],item);const second=addCartItem(first,item);assert.equal(first[0].quantity,1);assert.equal(second[0].quantity,2);assert.notEqual(first[0],second[0]);});
+test('different engraving finishes and gift messages remain separate',()=>{const a={...item,customEngraving:'VS',engravingFoil:'gold' as const};const b={...a,id:'b',engravingFoil:'silver' as const};const c={...a,id:'c',giftCardMessage:'A gift',isGiftWrapped:true};assert.equal(addCartItem(addCartItem([a],b),c).length,3);});
+test('inventory cap applies across all personalized versions',()=>{const cart=addCartItem([{...item,quantity:4}],{...item,id:'b',customEngraving:'X',quantity:3});assert.equal(cart[1].quantity,1);assert.equal(addCartItem(cart,{...item,id:'c',customEngraving:'Y'}),cart);assert.equal(updateCartQuantity(cart,'a',99)[0].quantity,4);});
+test('sold out and invalid quantities cannot enter the bag',()=>{assert.deepEqual(addCartItem([],{...item,variant:{...item.variant,isSoldOut:true}}),[]);assert.deepEqual(addCartItem([],{...item,quantity:NaN}),[]);assert.deepEqual(updateCartQuantity([item],'a',0),[]);});
+test('reloading refreshes price, availability and archived products',()=>{const updated={...product,variants:[{...item.variant,priceUSD:500,stockAvailable:1}]};const result=reconcileCart([{...item,quantity:3}],[updated]);assert.equal(result[0].quantity,1);assert.equal(result[0].variant.priceUSD,500);assert.deepEqual(reconcileCart([item],[{...product,status:'ARCHIVED'}]),[]);});
+test('promotion dates, membership, budget and minimum spend are validated',()=>{const promo=INITIAL_PROMOTIONS[0];const date=new Date('2026-06-01');assert.equal(promotionError(promo,2000,true,date),null);assert.ok(promotionError(promo,2000,false,date));assert.ok(promotionError(promo,20,true,date));assert.ok(promotionError(promo,2000,true,new Date('2027-01-01')));assert.ok(promotionError({...promo,budgetUsedUSD:promo.budgetLimitUSD!},2000,true,date));});
+test('discount cannot exceed subtotal, cap or remaining budget',()=>{const promo={...INITIAL_PROMOTIONS[1],startDate:'2000-01-01',endDate:'2099-12-31',minSpendUSD:0,value:10000,budgetLimitUSD:100,budgetUsedUSD:95};assert.equal(discountFor(promo,1000,false),5);assert.equal(discountFor({...promo,budgetLimitUSD:undefined},10,false),10);});
