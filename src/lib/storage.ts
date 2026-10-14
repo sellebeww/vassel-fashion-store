@@ -1,25 +1,25 @@
 import { CAMPAIGN_MEDIA } from '../data/campaignMedia';
 import assetMap from '../data/assetMap.json';
-import { 
-  Product, 
-  HeroSlide, 
-  CartItem, 
-  Order, 
-  Boutique, 
-  Appointment, 
-  Promotion, 
-  AuditLogEntry, 
-  AuthenticityRecord, 
+import {
+  Product,
+  HeroSlide,
+  CartItem,
+  Order,
+  Boutique,
+  Appointment,
+  Promotion,
+  AuditLogEntry,
+  AuthenticityRecord,
   Currency,
   UserProfile
 } from '../types';
-import { 
-  INITIAL_PRODUCTS, 
-  INITIAL_HERO_SLIDES, 
-  INITIAL_BOUTIQUES, 
-  INITIAL_JOURNAL, 
-  INITIAL_AUTHENTICITY_RECORDS, 
-  INITIAL_PROMOTIONS 
+import {
+  INITIAL_PRODUCTS,
+  INITIAL_HERO_SLIDES,
+  INITIAL_BOUTIQUES,
+  INITIAL_JOURNAL,
+  INITIAL_AUTHENTICITY_RECORDS,
+  INITIAL_PROMOTIONS
 } from '../data/initialData';
 
 const STORAGE_KEYS = {
@@ -130,9 +130,9 @@ export function logoutUser(): boolean {
 // --- AUDIT LOGGER ---
 // ==========================================
 export function logAudit(
-  action: string, 
-  details: string, 
-  actor: string = 'Atelier Director', 
+  action: string,
+  details: string,
+  actor: string = 'Atelier Director',
   role: string = 'SUPER_ADMIN'
 ) {
   const currentLogs = getLocal<AuditLogEntry[]>(STORAGE_KEYS.AUDIT_LOGS, []);

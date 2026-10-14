@@ -1,13 +1,13 @@
 export type Currency = 'USD' | 'EUR' | 'GBP' | 'IDR';
 export type Language = 'en' | 'fr' | 'id';
 
-export type UserRole = 
-  | 'SUPER_ADMIN' 
-  | 'ATELIER_DIRECTOR' 
-  | 'INVENTORY_MANAGER' 
-  | 'MERCHANDISER' 
-  | 'CLIENT_CONCIERGE' 
-  | 'FINANCE' 
+export type UserRole =
+  | 'SUPER_ADMIN'
+  | 'ATELIER_DIRECTOR'
+  | 'INVENTORY_MANAGER'
+  | 'MERCHANDISER'
+  | 'CLIENT_CONCIERGE'
+  | 'FINANCE'
   | 'CLIENT';
 
 export type LoyaltyTier = 'PATRON_SILVER' | 'GOLD_PATRON' | 'PLATINUM_CIRCLE';
@@ -127,13 +127,13 @@ export interface CartItem {
   giftCardMessage?: string;
 }
 
-export type OrderStatus = 
-  | 'AWAITING_PAYMENT' 
-  | 'CONFIRMED' 
-  | 'ATELIER_INSPECTION' 
-  | 'PACKED_WHITE_GLOVE' 
-  | 'IN_TRANSIT' 
-  | 'DELIVERED' 
+export type OrderStatus =
+  | 'AWAITING_PAYMENT'
+  | 'CONFIRMED'
+  | 'ATELIER_INSPECTION'
+  | 'PACKED_WHITE_GLOVE'
+  | 'IN_TRANSIT'
+  | 'DELIVERED'
   | 'COMPLETED';
 
 export interface Order {

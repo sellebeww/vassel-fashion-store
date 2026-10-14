@@ -2,18 +2,18 @@ import { addCartItem } from '../../lib/commerce';
 import { INITIAL_HERO_SLIDES } from '../../data/initialData';
 import React, { useState } from 'react';
 import { Product, HeroSlide, Order, Promotion, VideoHotspot, AuditLogEntry, Currency } from '../../types';
-import { 
-  getProducts, 
-  saveProducts, 
-  getHeroSlides, 
-  saveHeroSlides, 
-  getOrders, 
-  updateOrderStatus, 
-  getPromotions, 
-  savePromotions, 
-  getAuditLogs, 
-  logAudit, 
-  formatCurrency, 
+import {
+  getProducts,
+  saveProducts,
+  getHeroSlides,
+  saveHeroSlides,
+  getOrders,
+  updateOrderStatus,
+  getPromotions,
+  savePromotions,
+  getAuditLogs,
+  logAudit,
+  formatCurrency,
   updateProductStock,
   toggleProductFeatured,
   toggleProductSoldOut,
@@ -21,17 +21,17 @@ import {
   setVariantStock,
   resetToInitialCatalog
 } from '../../lib/storage';
-import { 
-  LayoutDashboard, 
-  Video, 
-  Package, 
-  Boxes, 
-  Tag, 
-  ShoppingBag, 
-  ShieldAlert, 
-  Plus, 
-  Trash2, 
-  Eye, 
+import {
+  LayoutDashboard,
+  Video,
+  Package,
+  Boxes,
+  Tag,
+  ShoppingBag,
+  ShieldAlert,
+  Plus,
+  Trash2,
+  Eye,
   AlertTriangle,
   Sparkles,
   Star,
@@ -47,14 +47,14 @@ interface AdminSuiteProps {
   onNavigateHome: () => void;
 }
 
-type AdminTab = 
+type AdminTab =
   | 'dashboard'
   | 'main-page'
-  | 'hero-video' 
-  | 'products' 
-  | 'inventory' 
-  | 'promotions' 
-  | 'orders' 
+  | 'hero-video'
+  | 'products'
+  | 'inventory'
+  | 'promotions'
+  | 'orders'
   | 'audit-log';
 
 export const AdminSuite: React.FC<AdminSuiteProps> = ({ currency, onNavigateHome }) => {
