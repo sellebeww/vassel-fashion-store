@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "api/index.mjs": { "includeFiles": "{public,server}/**" }
+  },
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "/api/index.mjs" },
+    { "source": "/uploads/:path*", "destination": "/api/index.mjs" },
+    { "source": "/robots.txt", "destination": "/api/index.mjs" },
+    { "source": "/sitemap.xml", "destination": "/api/index.mjs" },
+    { "source": "/((?!assets/|images/|brand/).*)", "destination": "/index.html" }
+  ]
+}
