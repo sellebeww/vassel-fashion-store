@@ -131,9 +131,12 @@ app.use((req, res, next) => {
     "Referrer-Policy": "strict-origin-when-cross-origin",
     "X-Frame-Options": "DENY",
     "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+    // Production only: the Vite dev server needs inline scripts and a HMR websocket.
     // style-src 'unsafe-inline': motion/react writes inline style attributes.
-    "Content-Security-Policy":
-      "default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+    ...(process.env.NODE_ENV === "production" && {
+      "Content-Security-Policy":
+        "default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+    }),
     ...(process.env.COOKIE_SECURE === "true" && {
       "Strict-Transport-Security": "max-age=31536000",
     }),
