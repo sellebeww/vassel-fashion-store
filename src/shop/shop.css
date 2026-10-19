@@ -2791,3 +2791,13 @@
     translate: 3px 0;
   }
 }
+
+/* WCAG 2.2 target size (24px) for product links and checkboxes. */
+.v-store .v-product-name {
+  min-height: 24px;
+}
+.v-store input[type="checkbox"],
+.v-store input[type="radio"] {
+  width: 24px;
+  height: 24px;
+}
