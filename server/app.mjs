@@ -196,6 +196,7 @@ app.use("/api", (req, res, next) => {
 app.use("/api", user);
 const listeners = new Set();
 app.get("/api/live", (req, res) => {
+  if (listeners.size >= 1000) return res.status(503).end();
   res.set({
     "Content-Type": "text/event-stream",
     "Cache-Control": "no-cache",
