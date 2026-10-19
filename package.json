@@ -10,6 +10,7 @@
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit",
     "typecheck": "tsc --noEmit",
+    "format": "prettier --write src server tests scripts",
     "test": "node --import tsx --test tests/*.test.ts",
     "test:browser": "npm run build && node scripts/qa-store.mjs",
     "start": "NODE_ENV=production node --env-file-if-exists=.env server/index.mjs",

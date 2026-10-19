@@ -149,6 +149,33 @@ app.use("/api", (req, res, next) => {
   req.body ??= {};
   next();
 });
+const siteOrigin = (req) =>
+  process.env.PUBLIC_ORIGIN || `${req.protocol}://${req.get("host")}`;
+const privatePath = /^\/(admin|api|account|login|register|checkout|cart|orders|reset-password|forgot-password)(\/|$)/;
+app.use((req, res, next) => {
+  if (privatePath.test(req.path)) res.set("X-Robots-Tag", "noindex, nofollow");
+  next();
+});
+app.get("/robots.txt", (req, res) =>
+  res
+    .type("text/plain")
+    .send(
+      `User-agent: *\nDisallow: /admin\nDisallow: /api/\nDisallow: /account\nDisallow: /checkout\nDisallow: /cart\nSitemap: ${siteOrigin(req)}/sitemap.xml\n`,
+    ),
+);
+app.get("/sitemap.xml", (req, res) => {
+  const base = siteOrigin(req);
+  const urls = ["/", "/shop", "/maison", "/atelier", "/collections/signature"].concat(
+    docs("product")
+      .filter((p) => p.visible)
+      .map((p) => "/products/" + p.slug),
+  );
+  res
+    .type("application/xml")
+    .send(
+      `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `<url><loc>${base}${u}</loc></url>`).join("\n")}\n</urlset>\n`,
+    );
+});
 app.use("/api", (req, res, next) => {
   res.set("Cache-Control", "no-store");
   if (!["GET", "HEAD", "OPTIONS"].includes(req.method)) {

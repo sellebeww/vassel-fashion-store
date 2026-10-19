@@ -827,7 +827,7 @@ function ProductEditor({
           {tr(
             p.images.map((src, i) => (
               <div key={i}>
-                <img src={src} alt={tr("Foto " + (i + 1))} />
+                <img src={src} alt={tr("Foto " + (i + 1))} loading="lazy" />
                 <div className="v-actions">
                   <button
                     type="button"
@@ -1009,7 +1009,7 @@ function CategoryEditor({
         {tr(
           data.categories.map((x) => (
             <article className="v-panel" key={x.id}>
-              <img src={x.image} alt={tr(x.name)} />
+              <img src={x.image} alt={tr(x.name)} loading="lazy" />
               <h3>{tr(x.name)}</h3>
               <p>
                 {tr(data.products.filter((p) => p.category === x.id).length)}{" "}
@@ -1159,7 +1159,7 @@ function OrderEditor({
           {tr(
             o.items.map((i) => (
               <div className="v-order-item" key={i.variantId}>
-                <img src={i.image} alt={tr("")} />
+                <img src={i.image} alt={tr("")} loading="lazy" />
                 <div>
                   <strong>{tr(i.name)}</strong>
                   <p>

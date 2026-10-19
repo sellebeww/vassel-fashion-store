@@ -52,6 +52,10 @@ Aplikasi memerlukan server Node untuk menjalankan API. Database dan upload lokal
 
 Admin mengelola toko; pembeli berbelanja dan melihat pesanan. Akun demo hanya untuk pengujian lokal. Untuk deployment, gunakan database baru, `DEMO_MODE=false`, dan buat admin melalui `npm run create:admin` dengan variabel `ADMIN_EMAIL`, `ADMIN_NAME`, dan `ADMIN_PASSWORD`.
 
+## Keamanan & SEO
+
+Server mengirim header CSP, `X-Frame-Options`, `Permissions-Policy`, dan HSTS (saat `COOKIE_SECURE=true`). Halaman privat (`/admin`, `/account`, `/checkout`, dll.) diberi `noindex`. `/robots.txt` dan `/sitemap.xml` (produk yang terlihat) dibuat otomatis dari `PUBLIC_ORIGIN`.
+
 ## Pengujian
 
 ```bash
@@ -59,6 +63,7 @@ npm run typecheck
 npm test
 npm run test:api
 npm run test:browser
+npm run format   # Prettier
 ```
 
 Tes browser membutuhkan Google Chrome dan menggunakan database sementara.

@@ -59,7 +59,7 @@ export function CartPage() {
                   l.p ? (
                     <>
                       <a href={"/products/" + l.p.slug}>
-                        <img src={l.p.images[0]} alt={tr(l.p.name)} />
+                        <img src={l.p.images[0]} alt={tr(l.p.name)} loading="lazy" />
                       </a>
                       <div>
                         <a href={"/products/" + l.p.slug}>
@@ -402,7 +402,7 @@ export function CheckoutPage() {
           {tr(
             quote?.items.map((i) => (
               <div className="v-order-item" key={i.variantId}>
-                <img src={i.image} alt={tr(i.name)} />
+                <img src={i.image} alt={tr(i.name)} loading="lazy" />
                 <div>
                   <strong>{tr(i.name)}</strong>
                   <p>

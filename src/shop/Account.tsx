@@ -598,7 +598,7 @@ export function OrderPage({ orderId }: { orderId: string }) {
           {tr(
             order.items.map((i) => (
               <div className="v-order-item" key={i.variantId}>
-                <img src={i.image} alt={tr(i.name)} />
+                <img src={i.image} alt={tr(i.name)} loading="lazy" />
                 <div>
                   <a href={"/products/" + i.slug}>{tr(i.name)}</a>
                   <p>
