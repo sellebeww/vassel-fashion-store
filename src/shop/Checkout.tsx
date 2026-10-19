@@ -59,7 +59,11 @@ export function CartPage() {
                   l.p ? (
                     <>
                       <a href={"/products/" + l.p.slug}>
-                        <img src={l.p.images[0]} alt={tr(l.p.name)} loading="lazy" />
+                        <img
+                          src={l.p.images[0]}
+                          alt={tr(l.p.name)}
+                          loading="lazy"
+                        />
                       </a>
                       <div>
                         <a href={"/products/" + l.p.slug}>
@@ -171,7 +175,7 @@ export function CartPage() {
   );
 }
 export function CheckoutPage() {
-  const { data, cart, updateCart, refresh, navigate } = useStore();
+  const { data, cart, updateCart, refresh, navigate, notify } = useStore();
   const [addresses, setAddresses] = useState<Address[]>([]),
     [address, setAddress] = useState<Address>({
       ...emptyAddress,
@@ -280,6 +284,7 @@ export function CheckoutPage() {
             });
             await updateCart([]);
             await refresh();
+            notify("Pesanan berhasil dibuat.");
             navigate("/orders/" + o.id);
           } catch (e: any) {
             setError(e.message);

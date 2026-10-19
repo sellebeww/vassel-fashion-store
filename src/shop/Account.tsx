@@ -13,7 +13,7 @@ import {
 } from "./Common";
 import type { Address, Order } from "./types";
 export function AuthPage({ mode = "login" }: { mode?: string }) {
-  const { setUser, navigate, path } = useStore();
+  const { setUser, navigate, path, notify } = useStore();
   const isAdmin = mode === "admin",
     register = mode === "register",
     forgot = mode === "forgot",
@@ -74,12 +74,14 @@ export function AuthPage({ mode = "login" }: { mode?: string }) {
               if (forgot) {
                 const r = await api("/auth/forgot", "POST", f);
                 setMessage(r.message);
+                notify(r.message);
               } else if (reset) {
                 await api("/auth/reset", "POST", {
                   ...f,
                   token: params.get("token"),
                 });
                 setMessage("Kata sandi diperbarui. Silakan masuk kembali.");
+                notify("Kata sandi diperbarui. Silakan masuk kembali.");
               } else {
                 const r = await api(
                   "/auth/" + (register ? "register" : "login"),
@@ -87,6 +89,7 @@ export function AuthPage({ mode = "login" }: { mode?: string }) {
                   { ...f, admin: isAdmin },
                 );
                 await setUser(r.user);
+                notify(register ? "Akun berhasil dibuat." : "Berhasil masuk.");
                 const next = params.get("next");
                 navigate(
                   isAdmin

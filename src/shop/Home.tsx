@@ -6,7 +6,7 @@ import { api } from "./api";
 import { getLanguage, tr } from "./i18n";
 import { ProductCard, Field, Busy, Message } from "./Common";
 export function HomePage() {
-  const { data } = useStore();
+  const { data, notify } = useStore();
   const base = data.home;
   const h =
     getLanguage() === "fr" ? { ...base, ...base.translations?.fr } : base;
@@ -311,6 +311,7 @@ export function HomePage() {
                     consent,
                   });
                   setMessage(r.message);
+                  notify(r.message);
                   setError(false);
                   setEmail("");
                   setConsent(false);

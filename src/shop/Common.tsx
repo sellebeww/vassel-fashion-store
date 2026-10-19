@@ -246,7 +246,8 @@ export function AddressFields({
   );
 }
 export function Upload({ onUpload }: { onUpload: (url: string) => void }) {
-  const [busy, setBusy] = useState(false),
+  const { notify } = useStore(),
+    [busy, setBusy] = useState(false),
     [error, setError] = useState("");
   return (
     <label className="v-upload">
@@ -270,6 +271,7 @@ export function Upload({ onUpload }: { onUpload: (url: string) => void }) {
             const r = await api("/admin/upload", "POST", form);
             if (r.type !== "image") throw new Error("Pilih file gambar.");
             onUpload(r.url);
+            notify("Foto berhasil diunggah.");
           } catch (e: any) {
             setError(e.message);
           } finally {
